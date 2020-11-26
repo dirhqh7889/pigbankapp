@@ -10,9 +10,14 @@
 			integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
 			crossorigin="anonymous"
 		/>
-    <link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="style.css" />
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	
 </head>
-<body>
+<body onload = "show();" onunload = "save();">
+		
+
 	
     
 
@@ -20,7 +25,8 @@
     <div class="aaa d-flex flex-row-reverse bd-highlight">
 		
         <button type="button" onclick = "getInputValuemino()"class="abc btn btn-outline-warning bd-highlight"> - </button>
-		<button type="button" onclick = "getInputValue()" class="bcd btn btn-outline-warning bd-highlight"> + </button>
+		<button type="button" onclick = "getInputValue(); vs()" class="bcd btn btn-outline-warning bd-highlight"> + </button>
+		
 		
 		
         
@@ -45,7 +51,7 @@
 				<div class="input-group-prepend">
 					<span class="input-group-text" id="inputGroup-sizing-sm">현재 금액</span>
 				</div>
-				<input type="text" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');" 
+				<input type="text" onkeyup="this.value=this.value.replace(/[^0-9]/g,''); " 
 				id = "inputId2" 
 				
 				class="form-control"
@@ -57,19 +63,20 @@
 			<div class="input-group-prepend">
 				<span class="input-group-text" id="inputGroup-sizing-sm">계산 금액</span>
 			</div>
-			<input type="text" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');"
+			<input type="text" value = "" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');"
 				id ="inputId"
 				class="form-control"
 				aria-label="Sizing example input"
 				aria-describedby="inputGroup-sizing-sm"
 			/>
 		</div>
-		<div class="rese d-flex flex-row-reverse bd-highlight">
-			<button type="button" class="btn btn-danger bd-highlight">reset</button>
+		
 		</div>
         <div class="d-flex justify-content-center">
-            <img src="C:\Users\dirhq\Desktop\app\img\pig-icon.jpg" alt="" class="pig-icon">
+            <img src="img\pig-icon.jpg" alt="" class="pig-icon">
 		</div>
+
+		
 		<script type="text/javascript" src="script.js"></script>
     </script>
 		
